@@ -1,0 +1,32 @@
+<html>
+<body>
+<form action="#" th:action="@{/}" th:object="${dentistVisitDTO}" method="post">
+    <table>
+        <tr>
+            <td><p th:text="#{arsti.nimi}">arsti.nimi</p></td>
+            <td><input type="text" th:field="*{dentistName}"/></td>
+            <td th:if="${#fields.hasErrors('dentistName')}" th:errors="*{dentistName}">Nime viga</td>
+			<td><p th:text="#{sinu.nimi}">sinu.nimi</p></td>            
+            <td><input type="text" th:field="*{SinuNimi}"/></td>            
+            <td th:if="${#fields.hasErrors('SinuNimi')}" th:errors="*{SinuNimi}">Nime viga</td>
+        </tr>
+        <tr>
+            <td><p th:text="#{visiidi.kuupaev}">visiidi.kuupäev</p></td>
+            <td><input type="text" th:field="*{visitTime}"/></td>
+            <td th:if="${#fields.hasErrors('visitTime')}" th:errors="*{visitTime}">Kuupäeva viga</td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit" th:text="#{registreeri.visiidile}"><p>Registreeri visiidile</p></button>
+            </td>
+            <td>
+                <Listbox><p>Arstid</p></Listbox> 
+                <ListBox Grid.Row="1" Grid.Column="0">
+            <Calendar/>
+        </ListBox>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
