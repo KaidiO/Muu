@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin: 0; padding: 0; border: 0;}
+
+img.pop{position: absolute; top: 20px; left: 190px; padding: 15px; visibility: hidden; height: 0px;}
+
+p{width: 150px; float: left; margin: 20px 0 0 20px;}
+
+p#models a{display: block; padding: 5px; margin:0 0 20px 0; color: white; background: blue; text-decoration: none;}
+
+p#models a:hover{background: #F00; color: #FFF;}
+
+p#models a:hover img.pop{visibility: visible; height: auto; z-index: 10; border: 5px solid red; background: #FFF;}
