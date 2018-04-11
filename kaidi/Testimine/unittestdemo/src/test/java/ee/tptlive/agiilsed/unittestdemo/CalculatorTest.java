@@ -133,10 +133,7 @@ public class CalculatorTest {
         int x = 101;
 
         // when
-        int result = new Calculator().evaluate(input, x);
-
-        // then
-        assertEquals(101, result);
+        new Calculator().evaluate(input, x);
     }
     @Test (expected = IllegalArgumentException.class)
     public void evaluate_ReturnsSum_IfInputIsLessThen0() {
@@ -150,7 +147,7 @@ public class CalculatorTest {
         // then
         assertEquals(-1, result);
     }
-    @Test 
+    @Test
     public void evaluate_ReturnsSum_IfInputIs0() {
         // given
         String input = "x";
